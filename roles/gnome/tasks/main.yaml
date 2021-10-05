@@ -1,0 +1,10 @@
+- name: Install Gnome
+  pacman:
+    name: "{{ gnome_packages }}"
+  become: true
+
+- name: Enable GDM
+  become: true
+  service:
+    name: gdm
+    enabled: yes

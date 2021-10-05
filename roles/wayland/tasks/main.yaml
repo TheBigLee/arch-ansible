@@ -1,0 +1,4 @@
+- name: Install Wayland
+  pacman:
+    name: "{{ wayland_packages }}"
+  become: true

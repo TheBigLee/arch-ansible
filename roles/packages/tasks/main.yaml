@@ -1,0 +1,9 @@
+- name: Install batch of packages
+  command: >
+    yay -S
+      --answerclean none --answeredit none --answerupgrade none --answerdiff none
+      --removemake --noconfirm --combinedupgrade --needed
+      {% for pkg in packages %}
+        {{ pkg | quote }}
+      {% endfor %}
+

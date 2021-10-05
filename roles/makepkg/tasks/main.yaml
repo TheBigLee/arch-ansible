@@ -1,0 +1,11 @@
+- name: Install required packages
+  become: true
+  pacman:
+    name:
+      - base-devel
+
+- name: Run the installation backend
+  include_tasks: backend-makepkg.yaml
+  loop: "{{ packages}}"
+  loop_control:
+    loop_var: package_name

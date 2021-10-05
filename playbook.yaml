@@ -1,0 +1,7 @@
+- name: Configure the installed system
+  hosts: all
+  tags: mainconfig
+  roles:
+    - role: wayland
+    - role: gnome
+    - role: utils

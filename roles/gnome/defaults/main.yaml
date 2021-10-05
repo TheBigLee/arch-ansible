@@ -1,0 +1,4 @@
+gnome_packages:
+  - gdm
+  - gnome
+  - gnome-tweaks
